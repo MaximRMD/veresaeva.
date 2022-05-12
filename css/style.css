@@ -37,7 +37,6 @@ body {
   padding: 0 15px;
   max-width: 1088px;
   margin: 0 auto;
-  box-sizing: content-box;
 }
 
 .container__header {
@@ -113,6 +112,7 @@ body {
 
 .slider__item {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .slider__list {
@@ -140,12 +140,12 @@ body {
 } 
 
 .slider__blocks {
-    margin-right: 16px;
+
     border: 1px solid #D7D9DB;
     border-radius: 6px;
-    display: flex;
-    align-items: flex-end;
-    height: 518px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 }
 
 .slider__blocks:nth-last-of-type(1) {
@@ -156,7 +156,15 @@ body {
     font-size: 15px;
     line-height: 19px;
     font-weight: 600;
-    margin-bottom: 39px;
+    margin-bottom: 19px;
+}
+
+.title-margin {
+    margin-bottom: 38px;
+}
+
+.title-width {
+    max-width: 212px;
 }
 
 .slider__title {
@@ -170,7 +178,7 @@ body {
 }
 
 .slider__block-wrap {
-        margin: 22px;
+     margin: 0 22px 22px;
 }
 
 .slider__list-paragraph {
@@ -194,22 +202,23 @@ body {
 .slider__img-wrap {
     display: flex;
     flex-direction: column;
-    align-items: center;
     border-bottom: 1px solid #D7D9DB;
     margin-bottom: 17px;
+    height: 221px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 .slider__link {
-    padding: 16px 90px;
+    padding: 16px 0;
     background-color: #00C853;
     color: white;
-}
-
-@media (max-width:320px) {
-    .slider__link {
-        padding: 16px 59px;
-    }
-    
+    font-size: 15px;
+    line-height: 19px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .slider__price {
@@ -218,26 +227,21 @@ body {
     line-height: 15px;
 }
 
-.slider__img {
+/* .slider__img {
     margin-bottom: 40px;
-}
+} */
 
-
- .swiper {
-    max-width: 352px;
-  }
-
-  @media (min-width:769px) {
+  @media (max-width:769px) {
     .swiper {
-        display: none;
+        max-width: 352px;
       }
   }
 
-  @media (max-width:768px) {
+  /* @media (max-width:768px) {
  .slider__wrap {
      display: none;
  }
-  }
+  } */
 
   .slider {
     padding-bottom: 50px;
